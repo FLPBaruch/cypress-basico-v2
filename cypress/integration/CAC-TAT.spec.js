@@ -82,4 +82,11 @@ describe('Central de Atendimento ao Cliente TAT', function() {
 
         cy.get('#product').select('YouTube').should('have.value', 'youtube')
     })
+
+    it.only('marca o tipo de atendimento "Feedback"', function() {
+
+        cy.get('#support-type > :nth-child(2) > input').check().should('be.checked')
+        cy.get(':nth-child(4) > input').check().should('be.checked')
+        cy.get(':nth-child(3) > input').check().should('be.checked')
+        })
   })
